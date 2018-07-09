@@ -1,0 +1,49 @@
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest\CheckComboBoxTest\bin\Release\CheckComboBoxTest.exe.config
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest\CheckComboBoxTest\obj\Release\Interop.DtrHostLib.dll
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest\CheckComboBoxTest\obj\Release\BackupDB.csproj.ResolveComReference.cache
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest\CheckComboBoxTest\bin\Release\CheckComboBoxTest.exe
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest\CheckComboBoxTest\bin\Release\CheckComboBoxTest.pdb
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest\CheckComboBoxTest\obj\Release\CheckComboBoxTest.FrmMain.resources
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest\CheckComboBoxTest\obj\Release\CheckComboBoxTest.Properties.Resources.resources
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest\CheckComboBoxTest\obj\Release\CheckComboBoxTest.exe
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest\CheckComboBoxTest\obj\Release\CheckComboBoxTest.pdb
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest - Copy (5)\CheckComboBoxTest\bin\Release\CheckComboBoxTest.exe.config
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest - Copy (5)\CheckComboBoxTest\obj\Release\Interop.DtrHostLib.dll
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest - Copy (5)\CheckComboBoxTest\obj\Release\BackupDB.csproj.ResolveComReference.cache
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest - Copy (5)\CheckComboBoxTest\obj\Release\CheckComboBoxTest.exe
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest - Copy (5)\CheckComboBoxTest\obj\Release\CheckComboBoxTest.pdb
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest\CheckComboBoxTest\obj\Release\ResolveAssemblyReference.cache
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest\CheckComboBoxTest\obj\Release\GenerateResource.read.1.tlog
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest\CheckComboBoxTest\obj\Release\GenerateResource.write.1.tlog
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest - Copy (5) plz chk cycle\CheckComboBoxTest\bin\Release\CheckComboBoxTest.exe.config
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest - Copy (5) plz chk cycle\CheckComboBoxTest\obj\Release\Interop.DtrHostLib.dll
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest - Copy (5) plz chk cycle\CheckComboBoxTest\obj\Release\BackupDB.csproj.ResolveComReference.cache
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest - Copy (5) plz chk cycle\CheckComboBoxTest\obj\Release\CheckComboBoxTest.exe
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest - Copy (5) plz chk cycle\CheckComboBoxTest\obj\Release\CheckComboBoxTest.pdb
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest - Copy (5) plz chk cycle\CheckComboBoxTest\bin\Release\CheckComboBoxTest.exe
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest - Copy (5) plz chk cycle\CheckComboBoxTest\bin\Release\CheckComboBoxTest.pdb
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest - Copy (5) plz chk cycle\CheckComboBoxTest\obj\Release\ResolveAssemblyReference.cache
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest - Copy (5) plz chk cycle\CheckComboBoxTest\obj\Release\CheckComboBoxTest.FrmMain.resources
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest - Copy (5) plz chk cycle\CheckComboBoxTest\obj\Release\CheckComboBoxTest.Properties.Resources.resources
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest - Copy (5) plz chk cycle\CheckComboBoxTest\obj\Release\GenerateResource.read.1.tlog
+C:\Users\primeit\Downloads\Compressed\CheckComboBoxTest - Copy (5) plz chk cycle\CheckComboBoxTest\obj\Release\GenerateResource.write.1.tlog
+E:\Projects\db backup\CheckComboBoxTest\bin\Release\CheckComboBoxTest.exe.config
+E:\Projects\db backup\CheckComboBoxTest\obj\Release\Interop.DtrHostLib.dll
+E:\Projects\db backup\CheckComboBoxTest\obj\Release\BackupDB.csproj.ResolveComReference.cache
+E:\Projects\db backup\CheckComboBoxTest\obj\Release\CheckComboBoxTest.exe
+E:\Projects\db backup\CheckComboBoxTest\obj\Release\CheckComboBoxTest.pdb
+E:\Projects\db_backup\CheckComboBoxTest\bin\Release\CheckComboBoxTest.exe.config
+E:\Projects\db_backup\CheckComboBoxTest\obj\Release\Interop.DtrHostLib.dll
+E:\Projects\db_backup\CheckComboBoxTest\obj\Release\BackupDB.csproj.ResolveComReference.cache
+E:\Projects\db_backup\CheckComboBoxTest\obj\Release\CheckComboBoxTest.exe
+E:\Projects\db_backup\CheckComboBoxTest\obj\Release\CheckComboBoxTest.pdb
+C:\Users\primeit\Documents\Visual Studio 2010\Projects\db_backup\CheckComboBoxTest\bin\Release\BackupSQLServer.exe.config
+C:\Users\primeit\Documents\Visual Studio 2010\Projects\db_backup\CheckComboBoxTest\bin\Release\BackupSQLServer.exe
+C:\Users\primeit\Documents\Visual Studio 2010\Projects\db_backup\CheckComboBoxTest\bin\Release\BackupSQLServer.pdb
+C:\Users\primeit\Documents\Visual Studio 2010\Projects\db_backup\CheckComboBoxTest\obj\Release\Interop.DtrHostLib.dll
+C:\Users\primeit\Documents\Visual Studio 2010\Projects\db_backup\CheckComboBoxTest\obj\Release\BackupDB.csproj.ResolveComReference.cache
+C:\Users\primeit\Documents\Visual Studio 2010\Projects\db_backup\CheckComboBoxTest\obj\Release\BackupSQLServer.FrmMain.resources
+C:\Users\primeit\Documents\Visual Studio 2010\Projects\db_backup\CheckComboBoxTest\obj\Release\BackupSQLServer.Properties.Resources.resources
+C:\Users\primeit\Documents\Visual Studio 2010\Projects\db_backup\CheckComboBoxTest\obj\Release\BackupDB.csproj.GenerateResource.Cache
+C:\Users\primeit\Documents\Visual Studio 2010\Projects\db_backup\CheckComboBoxTest\obj\Release\BackupSQLServer.exe
+C:\Users\primeit\Documents\Visual Studio 2010\Projects\db_backup\CheckComboBoxTest\obj\Release\BackupSQLServer.pdb

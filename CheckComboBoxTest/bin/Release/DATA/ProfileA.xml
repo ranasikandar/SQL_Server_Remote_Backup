@@ -1,0 +1,63 @@
+<?xml version="1.0" standalone="yes"?>
+<Category>
+  <xs:schema id="Category" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="Category" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="SrNo" type="xs:int" minOccurs="0" />
+                <xs:element name="SqlServer" type="xs:string" minOccurs="0" />
+                <xs:element name="SqlUser" type="xs:string" minOccurs="0" />
+                <xs:element name="SqlPassword" type="xs:string" minOccurs="0" />
+                <xs:element name="RemoteDIR" type="xs:string" minOccurs="0" />
+                <xs:element name="FtpChk" type="xs:string" minOccurs="0" />
+                <xs:element name="FtpServer" type="xs:string" minOccurs="0" />
+                <xs:element name="FtpPort" type="xs:string" minOccurs="0" />
+                <xs:element name="FtpUser" type="xs:string" minOccurs="0" />
+                <xs:element name="FtpPassword" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <SrNo>2</SrNo>
+    <SqlServer>1.1.1.3</SqlServer>
+    <SqlUser>BgDhr7Ywdue*1*2*85KpCzzDdQ==</SqlUser>
+    <SqlPassword>S37tuCjK8FNARJbeJ10q0g==</SqlPassword>
+    <RemoteDIR>D8Nyg3PqKWZJePttbWR*1*2*Jw==</RemoteDIR>
+    <FtpChk>1</FtpChk>
+    <FtpServer>CuPxExyRbbHNCAtB9Vljcw==</FtpServer>
+    <FtpPort>0oucf0j9GYSB9jvAltSIVA==</FtpPort>
+    <FtpUser>48BfaQ2UgUR*1*2*zf/CLrNhRw==</FtpUser>
+    <FtpPassword>HWgUBv3mOdWPuGEASEGQEA==</FtpPassword>
+  </Table>
+  <Table>
+    <SrNo>3</SrNo>
+    <SqlServer>1.1.1.107</SqlServer>
+    <SqlUser>V65MskV2qsNoEhaQYc2Juw==</SqlUser>
+    <SqlPassword>48BfaQ2UgUR*1*2*zf/CLrNhRw==</SqlPassword>
+    <RemoteDIR>D8Nyg3PqKWZJePttbWR*1*2*Jw==</RemoteDIR>
+    <FtpChk>0</FtpChk>
+    <FtpServer>/d9nSRd9QtNg0uUwJMhcxQ==</FtpServer>
+    <FtpPort>/d9nSRd9QtNg0uUwJMhcxQ==</FtpPort>
+    <FtpUser>/d9nSRd9QtNg0uUwJMhcxQ==</FtpUser>
+    <FtpPassword>/d9nSRd9QtNg0uUwJMhcxQ==</FtpPassword>
+  </Table>
+  <Table>
+    <SrNo>4</SrNo>
+    <SqlServer>PRIMEIT-PC</SqlServer>
+    <SqlUser>BgDhr7Ywdue*1*2*85KpCzzDdQ==</SqlUser>
+    <SqlPassword>Kz*1*2*FEHLW7Wz/TNRBsakVhw==</SqlPassword>
+    <RemoteDIR>D8Nyg3PqKWZJePttbWR*1*2*Jw==</RemoteDIR>
+    <FtpChk>0</FtpChk>
+    <FtpServer>/d9nSRd9QtNg0uUwJMhcxQ==</FtpServer>
+    <FtpPort>/d9nSRd9QtNg0uUwJMhcxQ==</FtpPort>
+    <FtpUser>/d9nSRd9QtNg0uUwJMhcxQ==</FtpUser>
+    <FtpPassword>/d9nSRd9QtNg0uUwJMhcxQ==</FtpPassword>
+  </Table>
+</Category>

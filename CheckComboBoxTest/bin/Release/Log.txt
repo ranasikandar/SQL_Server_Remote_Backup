@@ -1,0 +1,186 @@
+03/10/2018 13:22:20 - Program Started
+03/10/2018 13:22:57 - DB is authanticated.
+
+03/10/2018 13:23:05 - DB 'PrimeLabSys' is selected for backup CHECKED
+
+03/10/2018 13:23:07 - Selected DB's: PrimeLabSys
+03/10/2018 13:23:10 - Ok its time to Backup. Trying to Backup.
+03/10/2018 13:23:18 - Backup Task Completed!
+
+
+03/10/2018 13:23:34 - Program Exit
+
+
+03/14/2018 16:33:12 - Program Started
+03/14/2018 16:33:29 - FTP Enabled.
+
+03/23/2018 12:49:31 - Program Started
+03/23/2018 12:49:44 - DB is authanticated.
+
+03/23/2018 12:49:53 - DB 'LabSys' is selected for backup CHECKED
+
+03/23/2018 12:49:55 - DB 'PrimeLabSys' is selected for backup CHECKED
+
+03/23/2018 12:50:00 - DB 'PrimeClinic' is selected for backup CHECKED
+
+03/23/2018 12:50:01 - Selected DB's: LabSys,PrimeClinic,PrimeLabSys
+03/23/2018 12:50:50 - DB is authanticated.
+
+03/23/2018 12:50:56 - Selected DB's:
+03/23/2018 12:50:58 - DB 'LabSys' is selected for backup CHECKED
+
+03/23/2018 12:51:01 - DB 'PrimeLabSys' is selected for backup CHECKED
+
+03/23/2018 12:51:03 - Selected DB's: LabSys,PrimeLabSys
+03/23/2018 12:51:08 - Ok its time to Backup. Trying to Backup.
+03/23/2018 12:51:12 - Backup Task Completed!
+
+
+03/23/2018 12:51:59 - Program Exit
+
+
+04-10-2018 14:16:22 - Program Started
+04-10-2018 14:16:28 - DB is authanticated.
+
+04-10-2018 14:16:36 - DB 'LabSys' is selected for backup CHECKED
+
+04-10-2018 14:16:38 - DB 'PrimeLabSys' is selected for backup CHECKED
+
+04-10-2018 14:16:40 - Selected DB's: LabSys,PrimeLabSys
+04-10-2018 14:16:42 - DB 'PrimeClinic' is selected for backup CHECKED
+
+04-10-2018 14:16:43 - DB 'SolidAccounts' is selected for backup CHECKED
+
+04-10-2018 14:16:44 - Selected DB's: LabSys,PrimeClinic,PrimeLabSys,SolidAccounts
+04-10-2018 14:16:52 - Ok its time to Backup. Trying to Backup.
+04-10-2018 14:16:58 - Backup Task Completed!
+
+
+04-10-2018 14:17:58 - Program Exit
+
+
+04-13-2018 16:34:21 - Program Started
+04-13-2018 16:35:18 - DB is authanticated.
+
+04-13-2018 16:35:23 - DB 'LabSys' is selected for backup CHECKED
+
+04-13-2018 16:35:24 - Selected DB's: LabSys
+04-13-2018 16:35:29 - Ok its time to Backup. Trying to Backup.
+04-13-2018 16:35:36 - Backup Task Completed!
+
+
+04-13-2018 16:35:39 - Program Exit
+
+
+04-13-2018 17:01:36 - Program Started
+04-13-2018 17:01:46 - DB is authanticated.
+
+04-13-2018 17:01:55 - DB 'PrimeClinic' is selected for backup CHECKED
+
+04-13-2018 17:01:56 - Selected DB's: PrimeClinic
+04-13-2018 17:02:01 - Ok its time to Backup. Trying to Backup.
+04-13-2018 17:02:02 - Backup Task Completed!
+
+
+04-13-2018 17:02:10 - Program Exit
+
+
+04-18-2018 14:55:57 - Program Started
+04-18-2018 14:57:02 - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+04-18-2018 14:57:08 - FTP Enabled.
+
+04-18-2018 14:58:00 - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+04-18-2018 14:58:10 - FTP Disabled.
+
+04-18-2018 14:58:10 - DB is authanticated.
+
+04-18-2018 14:58:19 - FTP Enabled.
+
+04-18-2018 14:59:12 - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+04-18-2018 15:00:05 - FTP Disabled.
+
+04-18-2018 15:00:10 - FTP Enabled.
+
+04-18-2018 15:01:07 - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+04-18-2018 15:01:24 - DB is authanticated.
+
+04-18-2018 15:01:31 - FTP Disabled.
+
+04-18-2018 15:01:33 - DB is authanticated.
+
+04-18-2018 15:01:37 - DB 'testing' is selected for backup CHECKED
+
+04-18-2018 15:01:38 - Selected DB's: testing
+04-18-2018 15:11:01 - Program Exit
+
+
+05/22/2018 14:15:16 - Program Started
+05/22/2018 14:15:26 - Login failed for user 'sa'.
+
+05/22/2018 14:15:38 - DB is authanticated.
+
+05/22/2018 14:15:49 - Selected DB's:
+05/22/2018 14:15:51 - FTP Enabled.
+
+05/22/2018 14:15:52 - FTP Disabled.
+
+05/22/2018 14:15:54 - Selected DB's:
+05/22/2018 14:16:03 - DB is authanticated.
+
+05/22/2018 14:16:08 - DB is authanticated.
+
+05/22/2018 14:17:06 - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+05/22/2018 14:17:28 - Program Exit
+
+
+06/04/2018 12:38:05 - Program Started
+06/04/2018 12:38:17 - DB is authanticated.
+
+06/04/2018 12:38:28 - Login failed for user 'sa'.
+
+06/04/2018 12:38:31 - DB is authanticated.
+
+06/04/2018 12:38:37 - Login failed for user 'prime'.
+
+06/04/2018 12:38:46 - Login failed for user 'sa'.
+
+06/04/2018 12:38:49 - Login failed for user 'prime'.
+
+06/04/2018 12:38:52 - FTP Enabled.
+
+06/04/2018 12:39:44 - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+06/04/2018 12:39:52 - Program Exit
+
+
+07/09/2018 16:30:27 - Program Started
+07/09/2018 16:30:40 - Login failed for user 'sa'.
+
+07/09/2018 16:30:54 - Login failed for user 'sa'.
+
+07/09/2018 16:31:13 - DB is authanticated.
+
+07/09/2018 16:31:30 - DB 'bitCalls' is selected for backup CHECKED
+
+07/09/2018 16:31:31 - Selected DB's: bitCalls
+07/09/2018 16:32:07 - DB is authanticated.
+
+07/09/2018 16:32:12 - Program Exit
+
+
+07/09/2018 16:40:34 - Program Started
+07/09/2018 16:40:49 - Login failed for user 'prime'.
+
+07/09/2018 16:41:12 - DB is authanticated.
+
+07/09/2018 16:41:26 - FTP Enabled.
+
+07/09/2018 16:41:27 - FTP Disabled.
+
+07/09/2018 16:41:44 - DB is authanticated.
+
