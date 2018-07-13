@@ -34,7 +34,6 @@ namespace BackupSQLServer {
             this.btnBrows = new System.Windows.Forms.Button();
             this.btnBackup = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.DateOfBackup = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.txtDbServer = new System.Windows.Forms.TextBox();
@@ -44,7 +43,9 @@ namespace BackupSQLServer {
             this.txtFtpUserName = new System.Windows.Forms.TextBox();
             this.txtFtpPasswd = new System.Windows.Forms.TextBox();
             this.gBoxDoIt = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtMinutes = new System.Windows.Forms.TextBox();
+            this.btnAutoBackupDate = new System.Windows.Forms.Button();
+            this.cbxDbName = new BackupSQLServer.CheckedComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtSqlPasswd = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -64,11 +65,13 @@ namespace BackupSQLServer {
             this.BtnDeleteProfile = new System.Windows.Forms.Button();
             this.BtnNewProfile = new System.Windows.Forms.Button();
             this.BtnSaveProfile = new System.Windows.Forms.Button();
-            this.cbxDbName = new BackupSQLServer.CheckedComboBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gBoxDoIt.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.GBoxFtp.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtOut
@@ -153,27 +156,16 @@ namespace BackupSQLServer {
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // DateOfBackup
-            // 
-            this.DateOfBackup.CustomFormat = "hh:mm:ss tt";
-            this.DateOfBackup.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DateOfBackup.Location = new System.Drawing.Point(7, 123);
-            this.DateOfBackup.Name = "DateOfBackup";
-            this.DateOfBackup.Size = new System.Drawing.Size(103, 20);
-            this.DateOfBackup.TabIndex = 7;
-            this.toolTip1.SetToolTip(this.DateOfBackup, "Only Time");
-            this.DateOfBackup.ValueChanged += new System.EventHandler(this.dtBackup_ValueChanged);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(4, 107);
+            this.label3.Location = new System.Drawing.Point(6, 107);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 13);
+            this.label3.Size = new System.Drawing.Size(134, 13);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Backup At Every:";
+            this.label3.Text = "Backup At Every, Min:";
             // 
             // txtDbServer
             // 
@@ -228,31 +220,55 @@ namespace BackupSQLServer {
             // gBoxDoIt
             // 
             this.gBoxDoIt.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.gBoxDoIt.Controls.Add(this.button1);
+            this.gBoxDoIt.Controls.Add(this.txtMinutes);
+            this.gBoxDoIt.Controls.Add(this.btnAutoBackupDate);
             this.gBoxDoIt.Controls.Add(this.txtBackupPath);
             this.gBoxDoIt.Controls.Add(this.label3);
             this.gBoxDoIt.Controls.Add(this.cbxDbName);
-            this.gBoxDoIt.Controls.Add(this.DateOfBackup);
             this.gBoxDoIt.Controls.Add(this.label17);
             this.gBoxDoIt.Controls.Add(this.btnBackup);
             this.gBoxDoIt.Controls.Add(this.label2);
             this.gBoxDoIt.Controls.Add(this.btnBrows);
-            this.gBoxDoIt.Location = new System.Drawing.Point(5, 328);
+            this.gBoxDoIt.Location = new System.Drawing.Point(5, 332);
             this.gBoxDoIt.Name = "gBoxDoIt";
             this.gBoxDoIt.Size = new System.Drawing.Size(403, 155);
             this.gBoxDoIt.TabIndex = 7;
             this.gBoxDoIt.TabStop = false;
             this.gBoxDoIt.Text = "Step 2:";
             // 
-            // button1
+            // txtMinutes
             // 
-            this.button1.Location = new System.Drawing.Point(116, 120);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(199, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Auto Backup: Enable/Disable";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.txtMinutes.Location = new System.Drawing.Point(10, 122);
+            this.txtMinutes.Name = "txtMinutes";
+            this.txtMinutes.Size = new System.Drawing.Size(130, 20);
+            this.txtMinutes.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.txtMinutes, "Enter Minutes. 0 for nothing");
+            this.txtMinutes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMinutes_KeyPress);
+            this.txtMinutes.Leave += new System.EventHandler(this.txtMinutes_Leave);
+            // 
+            // btnAutoBackupDate
+            // 
+            this.btnAutoBackupDate.Location = new System.Drawing.Point(224, 122);
+            this.btnAutoBackupDate.Name = "btnAutoBackupDate";
+            this.btnAutoBackupDate.Size = new System.Drawing.Size(165, 23);
+            this.btnAutoBackupDate.TabIndex = 8;
+            this.btnAutoBackupDate.Text = "Auto Backup: Enable/Disable";
+            this.btnAutoBackupDate.UseVisualStyleBackColor = true;
+            this.btnAutoBackupDate.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // cbxDbName
+            // 
+            this.cbxDbName.CheckOnClick = true;
+            this.cbxDbName.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cbxDbName.DropDownHeight = 1;
+            this.cbxDbName.FormattingEnabled = true;
+            this.cbxDbName.IntegralHeight = false;
+            this.cbxDbName.Location = new System.Drawing.Point(7, 37);
+            this.cbxDbName.Name = "cbxDbName";
+            this.cbxDbName.Size = new System.Drawing.Size(389, 21);
+            this.cbxDbName.TabIndex = 1;
+            this.cbxDbName.ValueSeparator = ", ";
+            this.cbxDbName.DropDownClosed += new System.EventHandler(this.ccb_DropDownClosed);
             // 
             // label4
             // 
@@ -325,7 +341,7 @@ namespace BackupSQLServer {
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtDbServer);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(5, 60);
+            this.groupBox1.Location = new System.Drawing.Point(6, 65);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(403, 114);
             this.groupBox1.TabIndex = 4;
@@ -387,7 +403,7 @@ namespace BackupSQLServer {
             this.GBoxFtp.Controls.Add(this.txtFtpServer);
             this.GBoxFtp.Controls.Add(this.label10);
             this.GBoxFtp.Controls.Add(this.label9);
-            this.GBoxFtp.Location = new System.Drawing.Point(5, 203);
+            this.GBoxFtp.Location = new System.Drawing.Point(6, 208);
             this.GBoxFtp.Name = "GBoxFtp";
             this.GBoxFtp.Size = new System.Drawing.Size(403, 101);
             this.GBoxFtp.TabIndex = 6;
@@ -417,7 +433,7 @@ namespace BackupSQLServer {
             // cbxFTP
             // 
             this.cbxFTP.AutoSize = true;
-            this.cbxFTP.Location = new System.Drawing.Point(11, 185);
+            this.cbxFTP.Location = new System.Drawing.Point(12, 190);
             this.cbxFTP.Name = "cbxFTP";
             this.cbxFTP.Size = new System.Drawing.Size(49, 17);
             this.cbxFTP.TabIndex = 5;
@@ -429,7 +445,7 @@ namespace BackupSQLServer {
             // 
             this.cboProfile.DisplayMember = "SqlServer";
             this.cboProfile.FormattingEnabled = true;
-            this.cboProfile.Location = new System.Drawing.Point(11, 26);
+            this.cboProfile.Location = new System.Drawing.Point(12, 31);
             this.cboProfile.Name = "cboProfile";
             this.cboProfile.Size = new System.Drawing.Size(121, 21);
             this.cboProfile.TabIndex = 0;
@@ -438,7 +454,7 @@ namespace BackupSQLServer {
             // 
             // BtnDeleteProfile
             // 
-            this.BtnDeleteProfile.Location = new System.Drawing.Point(143, 24);
+            this.BtnDeleteProfile.Location = new System.Drawing.Point(144, 29);
             this.BtnDeleteProfile.Name = "BtnDeleteProfile";
             this.BtnDeleteProfile.Size = new System.Drawing.Size(89, 23);
             this.BtnDeleteProfile.TabIndex = 1;
@@ -448,7 +464,7 @@ namespace BackupSQLServer {
             // 
             // BtnNewProfile
             // 
-            this.BtnNewProfile.Location = new System.Drawing.Point(232, 24);
+            this.BtnNewProfile.Location = new System.Drawing.Point(233, 29);
             this.BtnNewProfile.Name = "BtnNewProfile";
             this.BtnNewProfile.Size = new System.Drawing.Size(89, 23);
             this.BtnNewProfile.TabIndex = 2;
@@ -458,7 +474,7 @@ namespace BackupSQLServer {
             // 
             // BtnSaveProfile
             // 
-            this.BtnSaveProfile.Location = new System.Drawing.Point(321, 24);
+            this.BtnSaveProfile.Location = new System.Drawing.Point(322, 29);
             this.BtnSaveProfile.Name = "BtnSaveProfile";
             this.BtnSaveProfile.Size = new System.Drawing.Size(89, 23);
             this.BtnSaveProfile.TabIndex = 3;
@@ -466,44 +482,51 @@ namespace BackupSQLServer {
             this.BtnSaveProfile.UseVisualStyleBackColor = true;
             this.BtnSaveProfile.Click += new System.EventHandler(this.BtnSaveProfile_Click);
             // 
-            // cbxDbName
-            // 
-            this.cbxDbName.CheckOnClick = true;
-            this.cbxDbName.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cbxDbName.DropDownHeight = 1;
-            this.cbxDbName.FormattingEnabled = true;
-            this.cbxDbName.IntegralHeight = false;
-            this.cbxDbName.Location = new System.Drawing.Point(7, 37);
-            this.cbxDbName.Name = "cbxDbName";
-            this.cbxDbName.Size = new System.Drawing.Size(389, 21);
-            this.cbxDbName.TabIndex = 1;
-            this.cbxDbName.ValueSeparator = ", ";
-            this.cbxDbName.DropDownClosed += new System.EventHandler(this.ccb_DropDownClosed);
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(11, 10);
+            this.label12.Location = new System.Drawing.Point(12, 15);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(47, 13);
             this.label12.TabIndex = 10;
             this.label12.Text = "Profile:";
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.notifyIcon1.BalloonTipText = "sql server Auto backup";
+            this.notifyIcon1.BalloonTipTitle = "running in background";
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "sql server Auto backup";
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBox2.Controls.Add(this.groupBox1);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.GBoxFtp);
+            this.groupBox2.Controls.Add(this.BtnSaveProfile);
+            this.groupBox2.Controls.Add(this.cbxFTP);
+            this.groupBox2.Controls.Add(this.BtnNewProfile);
+            this.groupBox2.Controls.Add(this.cboProfile);
+            this.groupBox2.Controls.Add(this.BtnDeleteProfile);
+            this.groupBox2.Location = new System.Drawing.Point(0, 5);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(414, 314);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Profile";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(421, 812);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.BtnSaveProfile);
-            this.Controls.Add(this.BtnNewProfile);
-            this.Controls.Add(this.BtnDeleteProfile);
-            this.Controls.Add(this.cboProfile);
-            this.Controls.Add(this.cbxFTP);
-            this.Controls.Add(this.GBoxFtp);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(416, 812);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gBoxDoIt);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtOut);
@@ -515,12 +538,15 @@ namespace BackupSQLServer {
             this.Text = "SQL Server Backup";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Resize += new System.EventHandler(this.FrmMain_Resize);
             this.gBoxDoIt.ResumeLayout(false);
             this.gBoxDoIt.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.GBoxFtp.ResumeLayout(false);
             this.GBoxFtp.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -538,7 +564,6 @@ namespace BackupSQLServer {
         private System.Windows.Forms.Button btnBrows;
         private System.Windows.Forms.Button btnBackup;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.DateTimePicker DateOfBackup;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.GroupBox gBoxDoIt;
@@ -558,7 +583,7 @@ namespace BackupSQLServer {
         private System.Windows.Forms.TextBox txtFtpPasswd;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnSqlAuth;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAutoBackupDate;
         private System.Windows.Forms.GroupBox GBoxFtp;
         private System.Windows.Forms.CheckBox cbxFTP;
         private System.Windows.Forms.Button btnFtpAuth;
@@ -569,6 +594,9 @@ namespace BackupSQLServer {
         private System.Windows.Forms.Button BtnNewProfile;
         private System.Windows.Forms.Button BtnSaveProfile;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.TextBox txtMinutes;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
 

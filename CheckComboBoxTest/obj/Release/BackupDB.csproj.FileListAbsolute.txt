@@ -47,3 +47,14 @@ C:\Users\primeit\Documents\Visual Studio 2010\Projects\db_backup\CheckComboBoxTe
 C:\Users\primeit\Documents\Visual Studio 2010\Projects\db_backup\CheckComboBoxTest\obj\Release\BackupDB.csproj.GenerateResource.Cache
 C:\Users\primeit\Documents\Visual Studio 2010\Projects\db_backup\CheckComboBoxTest\obj\Release\BackupSQLServer.exe
 C:\Users\primeit\Documents\Visual Studio 2010\Projects\db_backup\CheckComboBoxTest\obj\Release\BackupSQLServer.pdb
+C:\Users\primeit\Documents\Visual Studio 2010\Projects\SQL_Server_Remote_Backup\CheckComboBoxTest\bin\Release\BackupSQLServer.exe.config
+C:\Users\primeit\Documents\Visual Studio 2010\Projects\SQL_Server_Remote_Backup\CheckComboBoxTest\obj\Release\Interop.DtrHostLib.dll
+C:\Users\primeit\Documents\Visual Studio 2010\Projects\SQL_Server_Remote_Backup\CheckComboBoxTest\obj\Release\BackupDB.csproj.ResolveComReference.cache
+C:\Users\primeit\Documents\Visual Studio 2010\Projects\SQL_Server_Remote_Backup\CheckComboBoxTest\obj\Release\BackupSQLServer.exe
+C:\Users\primeit\Documents\Visual Studio 2010\Projects\SQL_Server_Remote_Backup\CheckComboBoxTest\obj\Release\BackupSQLServer.pdb
+C:\Users\primeit\Documents\Visual Studio 2010\Projects\SQL_Server_Remote_Backup\CheckComboBoxTest\bin\Release\BackupSQLServer.exe
+C:\Users\primeit\Documents\Visual Studio 2010\Projects\SQL_Server_Remote_Backup\CheckComboBoxTest\bin\Release\BackupSQLServer.pdb
+C:\Users\primeit\Documents\Visual Studio 2010\Projects\SQL_Server_Remote_Backup\CheckComboBoxTest\obj\Release\BackupDB.csprojResolveAssemblyReference.cache
+C:\Users\primeit\Documents\Visual Studio 2010\Projects\SQL_Server_Remote_Backup\CheckComboBoxTest\obj\Release\BackupSQLServer.FrmMain.resources
+C:\Users\primeit\Documents\Visual Studio 2010\Projects\SQL_Server_Remote_Backup\CheckComboBoxTest\obj\Release\BackupSQLServer.Properties.Resources.resources
+C:\Users\primeit\Documents\Visual Studio 2010\Projects\SQL_Server_Remote_Backup\CheckComboBoxTest\obj\Release\BackupDB.csproj.GenerateResource.Cache

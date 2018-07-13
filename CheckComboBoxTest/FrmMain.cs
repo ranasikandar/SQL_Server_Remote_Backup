@@ -59,16 +59,14 @@ namespace BackupSQLServer
             this.gBoxDoIt.Enabled = false;
             this.GBoxFtp.Enabled = false;
 
-
-            DateOfBackup.Format = DateTimePickerFormat.Time;
-            DateOfBackup.ShowUpDown = true;
-            
             ///register a key to show & hide
             //gkh.HookedKeys.Add(Keys.Insert);
             //gkh.KeyDown += new KeyEventHandler(gkh_KeyDown);
 
             //////////////////LOAD XML FILE, SHOW data in PROFILE
             this.cboProfile.DataSource = SelectAll();
+
+            txtMinutes.Text = "60";
         }
 
         //void gkh_KeyDown(object sender, KeyEventArgs e)
@@ -279,8 +277,8 @@ namespace BackupSQLServer
 
 
 
-                    if (ErrorInBackup || ((TimeSpan.Compare(Convert.ToDateTime(DateTime.Now.ToLongTimeString()).TimeOfDay, Convert.ToDateTime(this.DateOfBackup.Value.ToLongTimeString()).TimeOfDay)) == 0))//TO DO MORE WORK FOR ACURACY
-                    {
+                    //if (ErrorInBackup || ((TimeSpan.Compare(Convert.ToDateTime(DateTime.Now.ToLongTimeString()).TimeOfDay, Convert.ToDateTime(this.DateOfBackup.Value.ToLongTimeString()).TimeOfDay)) == 0))//TO DO MORE WORK FOR ACURACY
+                    //{
 
                         if (ChkValidation())
                         {
@@ -315,7 +313,7 @@ namespace BackupSQLServer
 
                         }
                         
-                    }
+                    //}
                 }
                 catch (Exception ex)
                 {
@@ -329,8 +327,8 @@ namespace BackupSQLServer
 
         private void dtBackup_ValueChanged(object sender, EventArgs e)
         {
-            WriteLog("Backup Time has been set to '" + this.DateOfBackup.Value.ToLongTimeString() + "'.");
-            txtOut.AppendText("Backup Time has been set to '" + this.DateOfBackup.Value.ToLongTimeString() + "' \r\n");
+            WriteLog("Backup Time has been set to '" + this.txtMinutes.Text + "'.");
+            txtOut.AppendText("Backup Time has been set to '" + this.txtMinutes.Text + "' \r\n");
         }
 
         private void bw_DoWork(object sender, DoWorkEventArgs e)
@@ -439,13 +437,21 @@ namespace BackupSQLServer
                 txtOut.AppendText("Auto Backup Disabled at " + DateTime.Now + "\n\n");
 
                 this.timer1.Enabled = false;
+                this.txtMinutes.Enabled = true;
             }
             else
             {
-                WriteLog("Auto Backup Enabled at " + DateTime.Now + "\n\n");
-                txtOut.AppendText("Auto Backup Enabled at " + DateTime.Now + "\n\n");
+                if (Convert.ToInt32(this.txtMinutes.Text)>0)
+                {
+                    WriteLog("Auto Backup Enabled at " + DateTime.Now + "\n\n");
+                    txtOut.AppendText("Auto Backup Enabled at " + DateTime.Now + "\n\n");
 
-                this.timer1.Enabled = true;
+                    timer1.Interval = Convert.ToInt32(this.txtMinutes.Text) * 60*1000;
+                    this.timer1.Enabled = true;
+                    this.txtMinutes.Enabled = false;
+                }
+
+                
             }
             
         }
@@ -914,5 +920,43 @@ namespace BackupSQLServer
             return (EncDec.Encryption.Decrypt(encryptedText));
         }
 
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Show();
+            this.WindowState = FormWindowState.Normal;
+            notifyIcon1.Visible = false;  
+        }
+
+        private void FrmMain_Resize(object sender, EventArgs e)
+        {
+            //if the form is minimized  
+            //hide it from the task bar  
+            //and show the system tray icon (represented by the NotifyIcon control)  
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                Hide();
+                notifyIcon1.Visible = true;
+            }
+
+            notifyIcon1.ShowBalloonTip(1000);
+        }
+
+        private void txtMinutes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtMinutes_Leave(object sender, EventArgs e)
+        {
+            if (this.txtMinutes.Text=="")
+            {
+                this.txtMinutes.Text = "0";
+            }
+        }
+
+        
     }
 }
